@@ -1,0 +1,6 @@
+.venv
+.env
+__pycache__
+Artifacts/*
+!Artifacts/BiGRU_model.keras
+!Artifacts/tokenizer.pkl

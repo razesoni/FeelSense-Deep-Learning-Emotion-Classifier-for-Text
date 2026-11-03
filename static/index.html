@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mood Mirror</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body data-emotion="idle">
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+  <main class="stage">
+    <section class="card mirror" aria-label="Result" aria-live="polite">
+      <div class="face-wrap" id="face" aria-hidden="true"></div>
+      <h2 class="emotion" id="emotion">Hmm?</h2>
+      <p class="confidence" id="confidence">Feed me a sentence and I will make a face.</p>
+      <ul class="bars" id="bars"></ul>
+    </section>
+
+    <section class="card composer" aria-label="Your text">
+      <header>
+        <h1>Mood Mirror</h1>
+        <p class="status" id="status" role="status"><span class="dot"></span><span id="status-text">Checking server</span></p>
+      </header>
+
+      <form id="form" novalidate>
+        <label for="text">Type a sentence</label>
+        <textarea id="text" name="text" maxlength="2000" placeholder="I can't believe how wonderful today turned out to be"></textarea>
+        <div class="meta"><span id="counter">0 / 2000</span><span>Ctrl + Enter to send</span></div>
+        <p class="error" id="error" role="alert" hidden></p>
+        <div class="actions">
+          <button type="submit" id="submit">Read my mood</button>
+          <button type="button" id="clear" class="ghost">Clear</button>
+        </div>
+      </form>
+
+      <div class="chips" id="chips">
+        <button type="button" class="chip" data-text="I feel so happy and excited about the trip">Happy trip</button>
+        <button type="button" class="chip" data-text="I miss her so much and I can't stop crying">Missing someone</button>
+        <button type="button" class="chip" data-text="How dare they treat me like that, I am furious">Furious</button>
+        <button type="button" class="chip" data-text="I heard a noise downstairs and I am terrified">Strange noise</button>
+        <button type="button" class="chip" data-text="I never expected to win, this is unbelievable">Surprise win</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/js/faces.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
