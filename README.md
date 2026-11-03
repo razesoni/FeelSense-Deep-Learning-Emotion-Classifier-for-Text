@@ -200,6 +200,4 @@ The workflow at `.github/workflows/render-deploy.yml` builds the Docker image on
 - The API currently enables CORS for all origins. If exposing the service beyond a demo, restrict `allow_origins` in `main.py` to the intended frontend origin(s).
 - The model artifact and tokenizer are runtime requirements; keep them together and compatible when replacing or retraining the model.
 
-## License
 
-No license file is currently included. Please contact the repository owner before redistributing or reusing this project if you need explicit licensing terms.
